@@ -1,3 +1,5 @@
+//Time: O(NlogN + N) = O(NlogN) where NlogN is of sorting and N is of solution
+
 import java.util.*;
 public class max_repeating_sort 
 {

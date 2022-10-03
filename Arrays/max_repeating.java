@@ -1,3 +1,5 @@
+//Time: O(N^2)
+
 import java.util.*;
 public class max_repeating
 {
