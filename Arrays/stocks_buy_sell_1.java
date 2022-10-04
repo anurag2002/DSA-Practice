@@ -1,4 +1,5 @@
-// Time Complexity: O(N)
+// Time Complexity: O(N)   Space Complexity: O(1)
+//Buy and Sell stocks only once
 
 import java.util.*;
 public class stocks_buy_sell_1 
