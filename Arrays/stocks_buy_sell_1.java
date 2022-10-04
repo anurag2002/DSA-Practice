@@ -1,3 +1,5 @@
+// Time Complexity: O(N)
+
 import java.util.*;
 public class stocks_buy_sell_1 
 {
@@ -14,31 +16,27 @@ public class stocks_buy_sell_1
             arr.add(sc.nextInt());
         }
         
-        int max = 0,profit = 0, min = arr.get(0),sum = 0, i = 0, j = n-1;
+        int max = 0,profit = 0, j = n-1, min = arr.get(0),sum = 0, maxInd = 0;
 
         while(j >= 0)
         {
-            if(arr.get(j) > max)
+            if(max < arr.get(j))
             {
                 max = arr.get(j);
-                i = j;
+                maxInd = j;
             }
-            else
+            sum = max - arr.get(j);
+            if(sum > profit && j < maxInd)
             {
-                sum = max - arr.get(j);
-                if(sum > profit && j < i)
-                {
-                    profit = sum;
-                    min = arr.get(j);
-                }
+                profit = sum;
+                min = arr.get(j);
             }
-            System.out.println(max + " " + min + "i: " + i + "j: " +j);
             j--;
         }
 
-        System.out.println("Max profit: " + (max-min) + " " + profit);
-        System.out.println("Max: " + max);
-        System.out.println("Min: " + min);
+        System.out.println("Buy at Price: " + min);
+        System.out.println("Sell at Price: " + (profit + min));
+        System.out.println("Profit: " + profit);
 
         sc.close();
     }
