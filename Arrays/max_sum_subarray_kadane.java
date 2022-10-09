@@ -16,6 +16,7 @@ public class max_sum_subarray_kadane
         {
             arr.add(sc.nextInt());
         }
+        sc.close();
 
         int max = -10000, sum = 0, start = 0, end = 0, i = 0;
 
@@ -46,7 +47,5 @@ public class max_sum_subarray_kadane
         {
             System.out.print(arr.get(i) + " ");
         }
-
-        sc.close();
     }
 }
